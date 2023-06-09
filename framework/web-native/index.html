@@ -34,6 +34,13 @@
             title="Kivicube XR Scene"
         ></iframe>
 
+        <script>
+            if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+              var tipText = "当前网页需要运行在https协议上！\n否则iframe之中的网页因无法打开摄像头，而会出现类似“仅支持iOS11及以上系统”的相关提示。\n参考说明：https://www.yuque.com/kivicube/manual/web-ar-plugin-quick-start#ODr5h";
+              console.error(tipText);
+              alert(tipText);
+            }
+        </script>
         <script type="text/javascript" src="https://www.kivicube.com/lib/iframe-plugin.js"></script>
         <script>
             const kivicubeScene = document.querySelector("#kivicubeScene");
